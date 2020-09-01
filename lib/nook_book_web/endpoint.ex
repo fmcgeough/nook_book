@@ -7,7 +7,7 @@ defmodule NookBookWeb.Endpoint do
   @session_options [
     store: :cookie,
     key: "_nook_book_key",
-    signing_salt: "YsfOb6BN"
+    signing_salt: "zYeogyrn"
   ]
 
   socket "/socket", NookBookWeb.UserSocket,

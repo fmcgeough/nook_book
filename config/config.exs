@@ -10,10 +10,10 @@ use Mix.Config
 # Configures the endpoint
 config :nook_book, NookBookWeb.Endpoint,
   url: [host: "localhost"],
-  secret_key_base: "BEHuTQfC/sV4LHNY9k0n7dxwhc52wI6XHNSFt7VkZEFvEcmEJOoZEvgYtvdYyJaA",
+  secret_key_base: "UrDVw1oyzfrMpadrOQiUrD1NNc+Aaw+BlnQsvT2mU1G8xLYMo5Ia146X5lwzWh26",
   render_errors: [view: NookBookWeb.ErrorView, accepts: ~w(html json), layout: false],
   pubsub_server: NookBook.PubSub,
-  live_view: [signing_salt: "LIDtNLyQ"]
+  live_view: [signing_salt: "daFPmGRa"]
 
 # Configures Elixir's Logger
 config :logger, :console,
@@ -24,6 +24,8 @@ config :logger, :console,
 config :phoenix, :json_library, Jason
 
 config :mnesia, :dir, 'mnesia/data'
+
+config :nook_book, cluster_role: :primary, primary_node: :"n1@127.0.0.1"
 
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
