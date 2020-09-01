@@ -18,6 +18,5 @@ jobs:
       - run: mix phx.digest
       - run: mix release
       - run: cp _build/prod/nook_book-0.1.0.tar.gz nookbook.tgz
-
       - store_artifacts:
-        path: "nookbook.tgz"
+          path: "nookbook.tgz"
