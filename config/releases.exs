@@ -1,5 +1,18 @@
 import Config
 
+config :libcluster,
+  topologies: [
+    nook_book: [
+      strategy: Cluster.Strategy.Epmd,
+      config: [
+        hosts: [
+          :"nook_book@10.0.1.139",
+          :"nook_book@10.0.1.28"
+        ]
+      ]
+    ]
+  ]
+
 config :nook_book, NookBookWeb.Endpoint,
   server: true,
   http: [port: 4000],
